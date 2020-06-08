@@ -14,7 +14,7 @@ public class GeneralProductTest {
     }
     
     @Test
-    public void shouldDecrementValueBy1EveryDay() {
+    public void shouldDecreaseValueBy1EveryDay() {
         final GeneralProduct generalProduct = new GeneralProduct(10, 10);
 
         generalProduct.oneDayElapsed();
@@ -23,7 +23,7 @@ public class GeneralProductTest {
     }
     
     @Test
-    public void shouldDecrementValueBy2IfTheSellInLessThanZero() {
+    public void shouldDecreaseValueBy2IfTheSellInLessThanZero() {
         final GeneralProduct generalProduct = new GeneralProduct(0, 10);
 
         generalProduct.oneDayElapsed();

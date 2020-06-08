@@ -11,6 +11,9 @@ public class BackstagePass extends Product {
         if (sellIn >= 10) {
             setValue(value + 1);
         }
+        if ( sellIn >= 5) {
+            setValue(value + 2);
+        }
         this.sellIn -= 1;
     }
 }
