@@ -21,4 +21,13 @@ public class ProductTest {
 
         assertThat(product.getValue()).isEqualTo(9);
     }
+    
+    @Test
+    public void shouldDecrementValueBy2IfTheSellInLessThanZero() {
+        final Product product = new Product(0, 10);
+
+        product.oneDayElapsed();
+
+        assertThat(product.getValue()).isEqualTo(8);
+    }
 }

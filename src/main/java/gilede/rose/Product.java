@@ -16,6 +16,10 @@ public class Product {
 
     public void oneDayElapsed() {
         this.sellIn -= 1;
-        value -= 1;
+        if (sellIn < 0) {
+            value -= 2;
+        } else {
+            value -= 1;
+        }
     }
 }
