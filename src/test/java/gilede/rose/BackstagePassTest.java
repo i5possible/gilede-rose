@@ -33,6 +33,16 @@ public class BackstagePassTest {
         assertThat(backstagePass.getValue()).isEqualTo(13);
     }
 
+
+    @Test
+    public void shouldSetTo50IfTheValueIsGreaterThan50() {
+        final BackstagePass backstagePass = new BackstagePass(4, 49);
+
+        backstagePass.oneDayElapsed();
+
+        assertThat(backstagePass.getValue()).isEqualTo(50);
+    }
+
     @Test
     public void shouldSetValueToZeroIfSellInIsNegative() {
         final BackstagePass backstagePass = new BackstagePass(0, 10);
