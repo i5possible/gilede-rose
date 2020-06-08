@@ -4,12 +4,16 @@ plugins {
 		id 'idea'
 }
 
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
 repositories {
     jcenter()
 }
 
 dependencies {
     testImplementation 'junit:junit:4.13'
+    testImplementation 'org.assertj:assertj-core:3.16.1'
 }
 
 application {
