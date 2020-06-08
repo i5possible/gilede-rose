@@ -30,4 +30,13 @@ public class ProductTest {
 
         assertThat(product.getValue()).isEqualTo(8);
     }
+
+    @Test
+    public void shouldSetTheValueToZeroIfTheValueIsLessThanZero() {
+        final Product product = new Product(0, 0);
+
+        product.oneDayElapsed();
+
+        assertThat(product.getValue()).isEqualTo(0);
+    }
 }
