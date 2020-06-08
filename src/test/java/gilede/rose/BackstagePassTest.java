@@ -23,4 +23,13 @@ public class BackstagePassTest {
 
         assertThat(backstagePass.getValue()).isEqualTo(12);
     }
+
+    @Test
+    public void shouldIncreaseValueBy3Within5Days() {
+        final BackstagePass backstagePass = new BackstagePass(4, 10);
+
+        backstagePass.oneDayElapsed();
+
+        assertThat(backstagePass.getValue()).isEqualTo(13);
+    }
 }
