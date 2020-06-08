@@ -8,13 +8,15 @@ public class BackstagePass extends Product {
 
     @Override
     public void oneDayElapsed() {
-        if (sellIn >= 10) {
-            setValue(value + 1);
-        } else if ( sellIn >= 5) {
-            setValue(value + 2);
-        } else if (sellIn < 5) {
-            setValue(value + 3);
-        }
         this.sellIn -= 1;
+        if (sellIn >= 9) {
+            setValue(value + 1);
+        } else if (sellIn >= 4) {
+            setValue(value + 2);
+        } else if (sellIn > 0) {
+            setValue(value + 3);
+        } else if (sellIn < 0) {
+            setValue(0);
+        }
     }
 }

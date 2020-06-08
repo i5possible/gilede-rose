@@ -32,4 +32,13 @@ public class BackstagePassTest {
 
         assertThat(backstagePass.getValue()).isEqualTo(13);
     }
+
+    @Test
+    public void shouldSetValueToZeroIfSellInIsNegative() {
+        final BackstagePass backstagePass = new BackstagePass(0, 10);
+
+        backstagePass.oneDayElapsed();
+
+        assertThat(backstagePass.getValue()).isEqualTo(0);
+    }
 }

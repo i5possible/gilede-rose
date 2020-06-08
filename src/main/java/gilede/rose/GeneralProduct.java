@@ -13,16 +13,9 @@ public class GeneralProduct extends Product{
     public void oneDayElapsed() {
         this.sellIn -= 1;
         if (sellIn < 0) {
-            value -= 2;
+            setValue(value - 2);
         } else {
-            value -= 1;
-        }
-        ensureValueNotLessThanZero();
-    }
-
-    private void ensureValueNotLessThanZero() {
-        if (value < 0) {
-            value = 0;
+            setValue(value - 1);
         }
     }
 }
