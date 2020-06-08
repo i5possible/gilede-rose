@@ -1,9 +1,6 @@
 package gilede.rose;
 
-public class BackstagePass extends Product{
-
-    private int sellIn;
-    private int value;
+public class BackstagePass extends Product {
 
     public BackstagePass(int sellIn, int value) {
         super(sellIn, value);
@@ -11,5 +8,9 @@ public class BackstagePass extends Product{
 
     @Override
     public void oneDayElapsed() {
+        if (sellIn >= 10) {
+            setValue(value + 1);
+        }
+        this.sellIn -= 1;
     }
 }
