@@ -13,4 +13,9 @@ public class Product {
     public int getValue() {
         return value;
     }
+
+    public void oneDayElapsed() {
+        this.sellIn -= 1;
+        value -= 1;
+    }
 }

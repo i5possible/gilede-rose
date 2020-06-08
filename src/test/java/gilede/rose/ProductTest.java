@@ -12,4 +12,13 @@ public class ProductTest {
 
         assertThat(product.getValue()).isEqualTo(50);
     }
+    
+    @Test
+    public void shouldDecrementValueBy1EveryDay() {
+        final Product product = new Product(10, 10);
+
+        product.oneDayElapsed();
+
+        assertThat(product.getValue()).isEqualTo(9);
+    }
 }
